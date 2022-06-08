@@ -5,16 +5,24 @@
 
 <h1>Public Gateway Network</h1>
 
-<h2>What problem does it solve?</h2>
+<h2>What is it?</h2>
 
-<p>If you have TCP-service on local system behind NAT you can use 'Port Forwarding'</p>
-<p>But if there is reason you cannot do this, you can use XCHG</p>
-
-<h2>Current Network</h2>
+<p>A set of nodes</p>
 <p>XCHG network is in testing mode.</p>
-<p>Now only 2 server is available:</p>
+<p>Now only 2 nodes are available:</p>
 <li>54.37.73.160</li>
 <li>54.37.73.229</li>
+
+<h2>What services are offered by the nodes of this network?</h2>
+<p>Your service is registered on any node of the network. Address of your service is an RSA public key.</p>
+<p>Clients find the host your service is connected to. They send messages to your service.</p>
+
+<h2>Security</h2>
+<h3>Address protection</h3>
+<p>Address is your RSA public key. Only your service can confirm that this is its own address.</p>
+<h3>Data encryption</h3>
+<p>All traffic between your service and xchg-node is encrypted by AES-256. Key exchange - RSA-2048.</p>
+<p>Traffic between Client and Service encrypted by AES-256. Key exchange - RSA-2048.</p>
 
 <img style="width: 100%; display: block; max-width: 700px; margin: 10px auto 30px auto;" src="/img/scheme.png" alt="xchg scheme" />
 
