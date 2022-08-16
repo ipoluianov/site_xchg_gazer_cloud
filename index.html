@@ -1,36 +1,57 @@
 {#header.html#}
 
-{%title=XCHG%}
-{%description=XCHG%}
+{%title=XCHG - Peer-to-Peer Network%}
+{%description=XCHG - Peer-to-Peer Network%}
 
-<h1>transport network for decentralized applications</h1>
+<h1>Peer-to-Peer Network</h1>
 
-<h2>What is it?</h2>
+<h2>XCHG is ...</h2>
 
-<p>A set of nodes</p>
-<p>XCHG network is in testing mode.</p>
-<p>Now only 2 nodes are available:</p>
-<li>54.37.73.160 - 500 Megabit/sec</li>
-<li>54.37.73.229 - 500 Megabit/sec</li>
+<p>A public set of servers for peer-to-peer interaction</p>
+<li>XCHG Router</li>
+<li>Peer-to-Peer encryption (AES-256/RSA-2048)</li>
+<li>Authentication(P2P) is built into the protocol</li>
+<li>SDK for multiple programming languages</li>
+<li>Ability to create your own network of routers for your services</li>
 
-<h2>What services are offered by the nodes of this network?</h2>
-<p>Your service is registered on any node of the network. Address of your service is an RSA public key.</p>
-<p>Clients find the host your service is connected to. They send messages to your service.</p>
+<div class="card_container">
+    <div class="card_unit ani">
+        <a href="/applications/" class="card_unit_link">
+            <div class="card_content">
+                <div class="card_content_img"><img class="card_content_image" src="/img/index/applications.jpg"/></div>
+                <div class="card_content_text">Applications</div>
+                <div class="card_content_desc">IoT, Corporate, Remote Control&Monitoring</div>
+            </div>
+        </a>
+    </div>
+    <div class="card_unit ani">
+        <a href="/documentation/" class="card_unit_link">
+            <div class="card_content">
+                <div class="card_content_img"><img class="card_content_image" src="/img/index/documentation.jpg"/></div>
+                <div class="card_content_text">Documentation</div>
+                <div class="card_content_desc">Protocol documentation</div>
+            </div>
+        </a>
+    </div>
+    <div class="card_unit ani">
+        <a href="/mainnet/" class="card_unit_link">
+            <div class="card_content">
+                <div class="card_content_img"><img class="card_content_image" src="/img/index/mainnet.jpg"/></div>
+                <div class="card_content_text">MainNet</div>
+                <div class="card_content_desc">Public Servers</div>
+            </div>
+        </a>
+    </div>
+    <div class="card_unit ani">
+        <a href="/sdk/" class="card_unit_link">
+            <div class="card_content">
+                <div class="card_content_img"><img class="card_content_image" src="/img/index/sdk.png"/></div>
+                <div class="card_content_text">SDK</div>
+                <div class="card_content_desc">SDK for: GoLang/Dart/C++/C#/Python</div>
+            </div>
+        </a>
+    </div>
+</div>
 
-<h2>Security</h2>
-<h3>Address protection</h3>
-<p>Address is your RSA public key. Only your service can confirm that this is its own address.</p>
-<h3>Data encryption</h3>
-<p>All traffic between your service and xchg-node is encrypted by AES-256. Key exchange - RSA-2048.</p>
-<p>Traffic between Client and Service encrypted by AES-256. Key exchange - RSA-2048.</p>
-
-<h2>Cost</h2>
-<p>All the nodes are free for use. Limited frame size and request frequency.</p>
-<p>You can support the project by donations.</p>
-
-<h2>Add your xchg-node</h2>
-<p>You can support the network if you have server with unlimited traffic. Just install xchg and it will be connected to cloud automatically.</p>
-
-<img style="width: 100%; display: block; max-width: 700px; margin: 10px auto 30px auto;" src="/img/scheme.png" alt="xchg scheme" />
 
 {#bottom.html#}
