@@ -5,4 +5,29 @@
 
 <h1>XCHG Documentation</h1>
 
+<h2>Definitions</h2>
+<h3>Node</h3>
+<div>is a router</div>
+<div>has Address</div>
+<div>usually has a public IP-address. Through it, traffic is exchanged.</div>
+<div>accepts connections via TCP/IP</div>
+<div>verifies Addresses</div>
+<div>provides information about connected peers</div>
+<div>translates calls/responses to/from connected peers</div>
+
+<h3>Peer</h3>
+<div>is a peer connection to the xchg-node</div>
+<div>has Address confirmed by PrivateKey</div>
+<div>chooses a node suitable for it to receive/send traffic</div>
+<div>can be receive call from XCHG (server role)</div>
+<div>can send call to another peer (client role)</div>
+<div>should connect to prescribed nodes to be detected in the network.</div>
+
+<h3>Address</h3>
+<div>is a string of 32 characters. base32(sha256(publicKey)[0:20])</div>
+
+<h3>Network Map</h3>
+<div>contains addresses of all the nodes of the network</div>
+<div>divided into 32 sections</div>
+
 {#bottom.html#}
