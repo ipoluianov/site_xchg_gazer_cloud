@@ -1,0 +1,47 @@
+{#header.html#}
+
+{%title=XCHG Protocol L1%}
+{%description=XCHG Protocol L1%}
+
+<h1>XCHG Protocol L1</h1>
+
+<h3>Frame format</h3>
+<table>
+    <tr><td>Offset</td><td>Size, bytes</td><td>Name</td><td>Description</td></tr>
+    <tr><td>0</td><td>1</td><td>Signature (Magic)</td><td>always 0xAA</td></tr>
+    <tr><td>1</td><td>1</td><td>Protocol Version</td><td>always 0x01</td></tr>
+    <tr><td>2</td><td>1</td><td>Frame Type</td><td><a href="#frame_types">see Frame Types</a></td></tr>
+    <tr><td>3</td><td>1</td><td>Reserved</td><td>Must be 0x00</td></tr>
+    <tr><td>4</td><td>4</td><td>Frame Length</td><td>Total frame length including the header</td></tr>
+    <tr><td>8</td><td>8</td><td>SID</td><td>ShortID of connection peer-router. It is a temparary ID of a peer witch connected to the router</td></tr>
+    <tr><td>16</td><td>8</td><td>TransactionID</td><td>Unique transaction identifier within the connection peer-router</td></tr>
+    <tr><td>24</td><td>8</td><td>SessionID</td><td>Unique session identifier in some server</td></tr>
+    <tr><td>32</td><td>N</td><td>Data</td><td><a href="#data">see Data</a></td></tr>
+</table>
+
+<h3 id="frame_types">Frame Types</h3>
+<h4>Init Types</h4>
+<table>
+    <tr>Code<td></td><td>Name</td><td>Content of Data Field</td><td>Direction</td></tr>
+    <tr><td>0x01</td><td>Init1</td><td>PeerPublicKey</td><td>Peer-to-Router</td></tr>
+    <tr><td>0x02</td><td>Init2</td><td>RouterPublicKey</td><td>Router-to-Peer</td></tr>
+    <tr><td>0x03</td><td>Init3</td><td>RSA(RouterSecret, PeerPublicKey)</td><td>Router-to-Peer</td></tr>
+    <tr><td>0x04</td><td>Init4</td><td>RSA(RouterSecret, RouterPublicKey)</td><td>Peer-to-Router</td></tr>
+    <tr><td>0x05</td><td>Init5</td><td>RSA(PeerSecret, RouterPublicKey)</td><td>Peer-to-Router</td></tr>
+    <tr><td>0x06</td><td>Init6</td><td>RSA(PeerSecret, PeerPublicKey)</td><td>Router-to-Peer</td></tr>
+</table>
+
+<h4>Regular Types</h4>
+<table>
+    <tr>Code<td></td><td>Name</td><td>Content of Data Field</td><td>Direction</td></tr>
+    <tr><td>0x10</td><td>Resolve Address</td><td>PeerPublicKey</td><td>Peer-to-Router</td></tr>
+    <tr><td>0x20</td><td>Call</td><td>RouterPublicKey</td><td>Peer-to-Router, Router-to-Peer</td></tr>
+    <tr><td>0x21</td><td>Set Response</td><td>RSA(RouterSecret, PeerPublicKey)</td><td>Peer-to-Router, Router-to-Peer</td></tr>
+    <tr><td>0xFF</td><td>Error</td><td>RSA(RouterSecret, RouterPublicKey)</td><td>Peer-to-Router, Router-to-Peer</td></tr>
+</table>
+
+<h3 id="data">Data</h3>
+<div>
+</div>
+
+{#bottom.html#}
