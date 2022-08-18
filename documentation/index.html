@@ -24,12 +24,12 @@
 <li>should connect to prescribed nodes to be detected in the network.</li>
 
 <h3>Address</h3>
-<li>is a string of 32 characters. base32(sha256(publicKey)[0:20])</li>
-<li>example: 5dj5skcryegsr6gmskcpn64qh2cao3x2</li>
+<li>is a string of 48 characters. base32(sha256(publicKey)[0:30]). case insensitive</li>
+<li>example: kqfc2fwogggtlsf7vnh46hhgdjmheiqvqycapj2f2xe2d5jz</li>
 
 <h3>Network Map</h3>
-<li>contains addresses of all the nodes of the network</li>
-<li>divided into 32 sections</li>
+<li>contains IP-addresses of all the nodes of the network</li>
+<li>is divided into at least 16 sections</li>
 
 <li><a href="/documentation/xchg-l1/">XCHG Protocol L1</a></li>
 <li><a href="/documentation/xchg-l2/">XCHG Protocol L2</a></li>
