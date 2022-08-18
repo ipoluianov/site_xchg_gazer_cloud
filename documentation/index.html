@@ -7,31 +7,31 @@
 
 <h2>Definitions</h2>
 <h3>Node</h3>
-<div>is a router</div>
-<div>has Address</div>
-<div>usually has a public IP-address. Through it, traffic is exchanged.</div>
-<div>accepts connections via TCP/IP</div>
-<div>verifies Addresses</div>
-<div>provides information about connected peers</div>
-<div>translates calls/responses to/from connected peers</div>
+<li>is a router</li>
+<li>has Address</li>
+<li>usually has a public IP-address. Through it, traffic is exchanged.</li>
+<li>accepts connections via TCP/IP</li>
+<li>verifies Addresses</li>
+<li>provides information about connected peers</li>
+<li>translates calls/responses to/from connected peers</li>
 
 <h3>Peer</h3>
-<div>is a peer connection to the xchg-node</div>
-<div>has Address confirmed by PrivateKey</div>
-<div>chooses a node suitable for it to receive/send traffic</div>
-<div>can be receive call from XCHG (server role)</div>
-<div>can send call to another peer (client role)</div>
-<div>should connect to prescribed nodes to be detected in the network.</div>
+<li>is a peer connection to the xchg-node</li>
+<li>has Address confirmed by PrivateKey</li>
+<li>chooses a node suitable for it to receive/send traffic</li>
+<li>can be receive call from XCHG (server role)</li>
+<li>can send call to another peer (client role)</li>
+<li>should connect to prescribed nodes to be detected in the network.</li>
 
 <h3>Address</h3>
-<div>is a string of 32 characters. base32(sha256(publicKey)[0:20])</div>
-<div>example: 5dj5skcryegsr6gmskcpn64qh2cao3x2</div>
+<li>is a string of 32 characters. base32(sha256(publicKey)[0:20])</li>
+<li>example: 5dj5skcryegsr6gmskcpn64qh2cao3x2</li>
 
 <h3>Network Map</h3>
-<div>contains addresses of all the nodes of the network</div>
-<div>divided into 32 sections</div>
+<li>contains addresses of all the nodes of the network</li>
+<li>divided into 32 sections</li>
 
-<div><a href="/documentation/xchg-l1/">XCHG Protocol L1</a></div>
-<div><a href="/documentation/xchg-l2/">XCHG Protocol L2</a></div>
+<li><a href="/documentation/xchg-l1/">XCHG Protocol L1</a></li>
+<li><a href="/documentation/xchg-l2/">XCHG Protocol L2</a></li>
 
 {#bottom.html#}
