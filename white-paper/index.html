@@ -1,0 +1,38 @@
+{#header.html#}
+
+{%title=XCHG White Paper%}
+{%description=XCHG White Paper%}
+
+<h1>XCHG White Papper</h1>
+
+<h2>Issue</h2>
+<div>
+    Decentralized applications need a way to communicate. It would be great if all nodes had a static IP address. But in fact it is impossible.
+    In any case, the server is needed for the interaction of peers. One of the options for convenient interaction of peers with each other is the XCHG protocol.
+</div>
+
+<h2>Problem Decomposition</h2>
+<div>Let's say we have two dapps behind NAT. What tasks need to be solved so that these programs communicate with each other.</div>
+<div>Each decentralized application must have a unique address throughout the world.</div>
+<div>Programs should have a meeting point where they can at least find each other.</div>
+<div>The application must have a way to prove that it is it.</div>
+<div>It is necessary that traffic between applications be encrypted.</div>
+
+<h2>Problem solution</h2>
+<div>First of all, applications need to meet somewhere. This meeting place must have a public IP-address.</div>
+<div>Therefore, there must be a server somewhere on the Internet that will accept connections from peers and redirect data between them. Let's call it a router. It is a lightweight server that can be run on low power hardware.</div>
+<div>The router should just be a delivery service with minimal overhead. This will allow for multiple such servers to provide fault tolerance.</div>
+<div>The router must distinguish peers by their addresses. </div>
+<div>The easiest way to ensure address uniqueness is a SHA256 of the RSA public key.</div>
+<div>So, we have peers connected to the router. Each peer has an address that it can prove ownership of.</div>
+<div>It remains only to add AES point-to-point encryption and the soup is ready.</div>
+
+<h2>How problems are solved in XCHG protocol</h2>
+<div>The router is a lightweight repeater. It only uses RSA-encryption to verify peer addresses.</div>
+<div>Encrypting data between peers is their concern.</div>
+<div>The peer SDK has everything you need for peer authentication, peer-to-peer AES-256 encryption, and link failover.</div>
+<div>The peer itself chooses through which router to receive requests to itself or through which peer to send requests to other peers.</div>
+<div>All a router needs is to provide forwarder services.</div>
+<div>In addition, the router should be the first barrier against DOS-attacks.</div>
+
+{#bottom.html#}
