@@ -7,7 +7,7 @@
 
 <h3>Frame format</h3>
 <table>
-    <tr><td>Offset</td><td>Size, bytes</td><td>Name</td><td>Description</td></tr>
+    <tr><td>Offset</td><td>Size, bytes</td><td style="width: 200px;">Name</td><td>Description</td></tr>
     <tr><td>0</td><td>1</td><td>Signature (Magic)</td><td>always 0xAA</td></tr>
     <tr><td>1</td><td>1</td><td>Protocol Version</td><td>always 0x01</td></tr>
     <tr><td>2</td><td>1</td><td>Frame Type</td><td><a href="#frame_types">see Frame Types</a></td></tr>
@@ -16,7 +16,9 @@
     <tr><td>8</td><td>8</td><td>SID</td><td>ShortID of connection peer-router. It is a temparary ID of a peer witch connected to the router</td></tr>
     <tr><td>16</td><td>8</td><td>TransactionID</td><td>Unique transaction identifier within the connection peer-router</td></tr>
     <tr><td>24</td><td>8</td><td>SessionID</td><td>Unique session identifier in some server</td></tr>
-    <tr><td>32</td><td>N</td><td>Data</td><td><a href="#data">see Data</a></td></tr>
+    <tr><td>32</td><td>4</td><td>Offset</td><td>Offset of the transaction data</td></tr>
+    <tr><td>36</td><td>4</td><td>TotalSize</td><td>Total Size of the transaction data</td></tr>
+    <tr><td>40</td><td>N</td><td>Data</td><td><a href="#data">see Data</a></td></tr>
 </table>
 
 <h3 id="frame_types">Frame Types</h3>
