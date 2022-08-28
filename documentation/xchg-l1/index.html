@@ -6,7 +6,7 @@
 <h1>XCHG Protocol L1</h1>
 
 <h3>Frame format</h3>
-<table>
+<table style="font-family: Consolas, 'Courier New', Courier, monospace;font-size: 10pt;">
     <tr><td>Offset</td><td>Size, bytes</td><td style="width: 200px;">Name</td><td>Description</td></tr>
     <tr><td>0</td><td>1</td><td>Signature (Magic)</td><td>always 0xAA</td></tr>
     <tr><td>1</td><td>1</td><td>Protocol Version</td><td>always 0x01</td></tr>
@@ -23,7 +23,7 @@
 
 <h3 id="frame_types">Frame Types</h3>
 <h4>Init Types</h4>
-<table>
+<table style="font-family: Consolas, 'Courier New', Courier, monospace;font-size: 10pt;">
     <tr><td>Code</td><td>Name</td><td>Content of Data Field</td><td>Direction</td></tr>
     <tr><td>0x01</td><td>Init1</td><td>PeerPublicKey</td><td>Peer-to-Router</td></tr>
     <tr><td>0x02</td><td>Init2</td><td>RouterPublicKey</td><td>Router-to-Peer</td></tr>
@@ -34,7 +34,7 @@
 </table>
 
 <h4>Regular Types</h4>
-<table>
+<table style="font-family: Consolas, 'Courier New', Courier, monospace;font-size: 10pt;">
     <tr><td>Code</td><td>Name</td><td>Content of Data Field</td><td>Direction</td></tr>
     <tr><td>0x10</td><td>Resolve Address</td><td>PeerPublicKey</td><td>Peer-to-Router</td></tr>
     <tr><td>0x20</td><td>Call</td><td>RouterPublicKey</td><td>Peer-to-Router, Router-to-Peer</td></tr>
